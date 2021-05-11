@@ -1,0 +1,26 @@
+{
+  "name": "graphql-prisma",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx babel-node src/index.js",
+    "start:dev": "nodemon src/index.js --ext js,json,graphql --exec babel-node"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.14.0",
+    "@babel/node": "^7.13.13",
+    "@babel/preset-env": "^7.14.1",
+    "@prisma/client": "^2.22.0",
+    "graphql-tools": "^7.0.4",
+    "graphql-yoga": "^1.18.3",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7",
+    "prisma": "^2.22.0"
+  }
+}
