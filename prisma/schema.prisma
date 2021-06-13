@@ -10,6 +10,8 @@ generator client {
   provider = "prisma-client-js"
 }
 
+// running migration wil create a User table in the db
+
 model User {
   id       String    @id @default(uuid())
   name     String    @db.VarChar(255)

@@ -186,6 +186,27 @@ import { users, posts } from "./models/dummy-data";
                 
             }
 
+            SUMMARY
+            for a resolver method that handles operations such as Query, it returns an object that matches up in type definition.
+            for e.g user:User! ==> user query must return a user object.
+            this means that the resolver that will handle user query must return an object that contains all the fields defined in the User type def by matching the field names
+
+            for scalar fields this is easy because it just matches the field name and returns the value associated with it as the value for the field defined in type defs
+            e.g User type def
+            type User {
+                id: ID!
+                name: String!
+                email: String!
+                age: Int
+                posts: [Post!]!
+            }
+
+            for scalar fields(fields where the value data type is scalar) i.e id, name, email, age, the resolver must return an object that contains these fields as property names and then assigns what ever value to the corresponding field names.
+            e.g value for id is matched or assigned to id in type defs
+
+            for relational fields(fields that have custom type as values) i.e posts that have relational values, the resolver function goes off to find the custom type resolver function to learn how to handle this type of field. hence it finds User posts method
+
+
 
 */
 
